@@ -4,12 +4,18 @@
   "description": "MERN tutorial following along with TraversyMedia, building a simple shopping list",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "comments": {
+    "client-install": "run npm install in the client for the dependencies",
     "start": "is used for production",
-    "server": "is used when developing the server"
+    "server": "is used when developing the server",
+    "client": "we just want to run the client server, same as doing cd client && npm start",
+    "dev": "run both server and client"
   },
   "repository": {
     "type": "git",
