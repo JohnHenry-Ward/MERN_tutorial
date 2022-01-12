@@ -17,3 +17,6 @@ Rather than having each component have it's own state, we used Redux to have a g
 
 ### Part5: Connecting Front End to Back End
 Instead of using static data for the front end and making requests via PostMan for the backend, we should make requests starting from the front end, to our backend routes, and update the database.
+
+### Part6: Deployment
+Now that we have a full stack app, we can deploy it. I used heroku to deploy and after working out a few kinks, it is live! You can find it [here](https://aqueous-falls-30734.herokuapp.com/)
