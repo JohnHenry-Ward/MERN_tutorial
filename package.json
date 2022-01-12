@@ -8,14 +8,16 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "comments": {
+  "notes-about-scripts": {
     "client-install": "run npm install in the client for the dependencies",
     "start": "is used for production",
     "server": "is used when developing the server",
     "client": "we just want to run the client server, same as doing cd client && npm start",
-    "dev": "run both server and client"
+    "dev": "run both server and client",
+    "heroku-postbuild": "prod is false so we can have heroku build it, install the dependencies and then build it"
   },
   "repository": {
     "type": "git",

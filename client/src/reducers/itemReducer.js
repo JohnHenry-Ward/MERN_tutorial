@@ -1,5 +1,4 @@
 // where our actual state is going to go, check our actions
-import { v4 } from 'uuid';
 import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from '../actions/types';
 
 const initialState = {
