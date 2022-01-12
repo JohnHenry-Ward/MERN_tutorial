@@ -11,3 +11,6 @@ Created the client using react and reactstrap
 
 ### Part3: Displaying data client side
 Showing hardcoded data on the client as well as deleting it (not from the database but just updating the component state).
+
+### Part4: Implementing Redux
+Rather than having each component have it's own state, we used Redux to have a global state to keep track of everything. 
