@@ -10,4 +10,4 @@ Created a back end to GET, POST, and DELETE items. Stored using MongoDB.
 Created the client using react and reactstrap
 
 ### Part3: Displaying data client side
-Showing hardcoded data on the client as well as deleting it (not from the database but just updating the componenet state).
+Showing hardcoded data on the client as well as deleting it (not from the database but just updating the component state).
