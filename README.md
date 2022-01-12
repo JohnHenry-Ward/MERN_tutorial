@@ -14,3 +14,6 @@ Showing hardcoded data on the client as well as deleting it (not from the databa
 
 ### Part4: Implementing Redux
 Rather than having each component have it's own state, we used Redux to have a global state to keep track of everything. 
+
+### Part5: Connecting Front End to Back End
+Instead of using static data for the front end and making requests via PostMan for the backend, we should make requests starting from the front end, to our backend routes, and update the database.
