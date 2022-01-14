@@ -1,25 +1,30 @@
 const express = require('express'); //backend framework
 const mongoose = require('mongoose'); //ORM (object relational mapping) to interact with database
-const bodyParser = require('body-parser'); //take requests and get data from the body
 const path = require('path'); //deal with file paths
+const config = require('config');
 
 const items = require('./routes/api/items');
+const users = require('./routes/api/users');
+const auth = require('./routes/api/auth');
 
 const app = express();
 
 // Body Parser (middleware)
-app.use(bodyParser.json());
+app.use(express.json());
 
 // DB Config
-const db = require('./config/keys').mongoURI;
+const db = config.get('mongoURI');
 
 // Connect to Mongo
-mongoose.connect(db)
+mongoose
+    .connect(db)
     .then(() => console.log('MongoDB Connected!'))
     .catch((err) => console.log('ERROR: MongoDB unable to connect', err));
 
 // Use Routes
 app.use('/api/items', items);
+app.use('/api/users', users);
+app.use('/api/auth', auth);
 
 // Serve static assets if we are in production
 if (process.env.NODE_ENV === 'production') {
