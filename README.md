@@ -20,3 +20,6 @@ Instead of using static data for the front end and making requests via PostMan f
 
 ### Part6: Deployment
 Now that we have a full stack app, we can deploy it. I used heroku to deploy and after working out a few kinks, it is live! You can find it [here](https://aqueous-falls-30734.herokuapp.com/)
+
+### Part7: Authentication (ongoing)
+Rather than having all routes public, we want some sort of authentication system. Here we use JSON Web Tokens to not only provide unique tokens, but also hash passwords that we store in the database
